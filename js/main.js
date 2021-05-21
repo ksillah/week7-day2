@@ -47,7 +47,7 @@ class Person{
     printInfo =() =>{
         return `Name: ${this.name}\nAge: ${this.age}`
     }
-    newAge(){ this.age++
+    newAge = () =>{ this.age++
         return (this.age)
         }
     }
@@ -58,12 +58,10 @@ let p2 = new Person('Najeo', 18)
 console.log(p1.printInfo())
 console.log(p2.printInfo())
 console.log(p1.newAge())
-console.log(p1.printInfo())
-console.log(p2.newAge())
+console.log(p1.newAge())
+console.log(p1.newAge())
 console.log(p1.printInfo())
 console.log(p2.printInfo())
-console.log(p2.newAge())
-
 
 // Use an arrow to create the printInfo method
 
@@ -97,3 +95,29 @@ isLong('my name is Kutah')
     console.log("Small Number")
 })
 isLong('my name is Kutah')
+
+///https://www.codewars.com/kata/5949481f86420f59480000e7/train/javascript
+function oddOrEven(array) {
+    if(array.length>0){
+      const sum = (a, b) => a + b;
+      answer=array.reduce(sum)
+      if (answer % 2==0){
+        return 'even'
+      }else{
+        return 'odd'
+      }
+      }
+    return 'even'
+    
+  }
+
+//https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/train/javascript
+  function firstNonConsecutive (arr) {
+    console.log(arr)
+    for(let i=0;i<arr.length-1; i++){
+      if( arr[i+1]!= arr[i]+1){
+        return arr[i+1]
+      }
+    }
+    return null;
+  }
